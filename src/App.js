@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles.css';
+import {useEffect, useState} from "react";
+import Season from "./Components/Season";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [episodeItems, setEpisodeItems] = useState([]);
+
+    const fetchData = async () => {
+        const response = await fetch('http://localhost:3001/episodes');
+
+        if (!response.ok) {
+            throw new Error('Data could not be fetched.')
+        }
+
+        return await response.json();
+    }
+
+    useEffect(() => {
+            fetchData()
+                .then((episodeData) => {
+                    setEpisodeItems(episodeData);
+                })
+                .catch((e) => {
+                    console.log(e.message);
+            })
+        }, []
+    );
+
+    return (
+        <Season />
+    );
 }
 
 export default App;
