@@ -1,6 +1,6 @@
 import './styles.css';
 import {useEffect, useState} from "react";
-import Season from "./Components/Season";
+import Season1 from "./Components/Season1";
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
     );
 
     return (
-        <Season />
+        <Season1 episodeItems={episodeItems} />
     );
 }
 
