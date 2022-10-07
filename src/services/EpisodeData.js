@@ -219,31 +219,31 @@ export const season3Data = {
             episode: 8,
             artist: "?",
             img: "pg-placeholder-white.png",
-            link: "https://soundcloud.com/pleasuregallery/pendrai-pleasure-gallery-s3-e7"
+            link: "#"
         },
         {
             episode: 9,
             artist: "?",
             img: "pg-placeholder-white.png",
-            link: "https://soundcloud.com/pleasuregallery/pendrai-pleasure-gallery-s3-e7"
+            link: "#"
         },
         {
             episode: 10,
             artist: "?",
             img: "pg-placeholder-black.png",
-            link: "https://soundcloud.com/pleasuregallery/pendrai-pleasure-gallery-s3-e7"
+            link: "#"
         },
         {
             episode: 11,
             artist: "?",
             img: "pg-placeholder-white.png",
-            link: "https://soundcloud.com/pleasuregallery/pendrai-pleasure-gallery-s3-e7"
+            link: "#"
         },
         {
             episode: 12,
             artist: "?",
             img: "pg-placeholder-black.png",
-            link: "https://soundcloud.com/pleasuregallery/pendrai-pleasure-gallery-s3-e7"
+            link: "#"
         }
     ]
 }
