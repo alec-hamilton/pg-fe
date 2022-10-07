@@ -1,9 +1,13 @@
 const List = ({seasonData}) => {
 
+    seasonData.episodes.forEach((episode) => {
+        if (episode.artist === '?') {
+            episode.artist = '';
+        }
+    })
+
     const firstHalfEpisodes = seasonData.episodes.filter((episode) => episode.episode < 7);
     const secondHalfEpisodes = seasonData.episodes.filter((episode) => episode.episode > 6);
-
-    // console.log(firstHalfEpisodes);
 
     return (
         <div className="list-container">
