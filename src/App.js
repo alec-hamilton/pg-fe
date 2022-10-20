@@ -1,29 +1,29 @@
-import './styles.css';
-import Season from './pages/home/components/Season/Season';
-import List from './pages/home/components/List/List';
-import { season1Data } from './services/EpisodeData';
-import { season2Data } from './services/EpisodeData';
-import { season3Data } from './services/EpisodeData';
+import "./styles.css";
+import Season from "./pages/home/components/Season/Season";
+import List from "./pages/home/components/List/List";
+import season1 from "./services/season1.json";
+import season2 from "./services/season2.json";
+import season3 from "./services/season3.json";
+import Navbar from "./components/Navbar/NavBar";
 
 function App() {
-
-    return (
-        <>
-        <div className="main-container">
-            <Season seasonData={season3Data} />
-            <List seasonData={season3Data} />
-        </div>
-        <div className="main-container">
-            <Season seasonData={season2Data} />
-            <List seasonData={season2Data} />
-        </div>
-        <div className="main-container">
-            <Season seasonData={season1Data} />
-            <List seasonData={season1Data} />   
-        </div>
-        </>  
-    );
-
+  return (
+    <>
+      <Navbar />
+      <div className="main-container">
+        <Season seasonData={season3} />
+        <List seasonData={season3} />
+      </div>
+      <div className="main-container">
+        <Season seasonData={season2} />
+        <List seasonData={season2} />
+      </div>
+      <div className="main-container">
+        <Season seasonData={season1} />
+        <List seasonData={season1} />
+      </div>
+    </>
+  );
 }
 
 export default App;

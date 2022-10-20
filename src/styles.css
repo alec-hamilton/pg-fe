@@ -1,18 +1,18 @@
 @font-face {
-  font-family: 'NeueMontreal';
-  src: url('../public/fonts/NeueMontreal-Regular.otf');
+  font-family: "NeueMontreal";
+  src: url("../public/fonts/NeueMontreal-Regular.otf");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'NeueMontreal';
-  src: url('../public/fonts/NeueMontreal-Bold.otf');
+  font-family: "NeueMontreal";
+  src: url("../public/fonts/NeueMontreal-Bold.otf");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'NeueMontreal';
-  src: url('../public/fonts/NeueMontreal-Light.otf');
+  font-family: "NeueMontreal";
+  src: url("../public/fonts/NeueMontreal-Light.otf");
   font-weight: 300;
 }
 
@@ -28,7 +28,9 @@
   border-radius: 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -64,15 +66,7 @@ h1 {
   margin-top: 95px;
 }
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--black);
-  border-bottom: 1px solid var(--white);
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
+
 
 .logo-container {
   display: flex;
@@ -95,7 +89,9 @@ h1 {
   width: 75px;
 }
 
-.menu {
+
+
+/* .menu {
   visibility: hidden;
   transform: translateX(100%);
   transition: 0.2s;
@@ -116,30 +112,7 @@ h1 {
   visibility: visible;
 }
 
-.menu > li {
-  padding: 0.6rem;
-}
 
-.menu-link {
-  font-family: NeueMontreal, sans-serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-  color: var(--white);
-  text-decoration: none;
-  transition: 0.3s;
-  transition-property: color;
-}
-
-.menu-pipe {
-  font-family: NeueMontreal, sans-serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-  color: var(--white);
-}
-
-.menu-link:hover {
-  color: var(--pink);
-}
 
 .horizontal-menu {
   display: none;
@@ -169,7 +142,7 @@ h1 {
 
 .remove {
   display: none;
-}
+} */
 
 .main-container {
   display: flex;
@@ -195,7 +168,7 @@ h1 {
   font-size: 0;
 }
 
-.links {
+/* .links {
   visibility: hidden;
   transform: translateX(105%);
   transition: 0.3s;
@@ -231,6 +204,7 @@ h1 {
 .material-icons:hover {
   color: var(--pink);
 }
+*/
 
 .list-left,
 .list-right {
@@ -475,8 +449,7 @@ p a:hover {
   font-size: 0.75rem;
 }
 
-@media only screen and (min-width: 500px) {  
-
+@media only screen and (min-width: 500px) {
   .logo-text {
     font-size: 2.2rem;
   }
@@ -494,10 +467,6 @@ p a:hover {
     padding: 0 1.25rem;
   }
 
-  .hamburger {
-    top: 35px;
-    right: 35px;
-  }
 
   .add {
     margin-right: 12px;
@@ -508,17 +477,11 @@ p a:hover {
   }
 
   .menu {
-  left: 6rem;
+    left: 6rem;
   }
-
-  .links {
-    left: 8rem;
-  }
-
 }
 
 @media only screen and (min-width: 700px) {
-  
   .logo-container {
     padding-left: 0.5rem;
     gap: 0.5rem;
@@ -559,10 +522,6 @@ p a:hover {
     column-gap: 2rem;
   }
 
-  .hamburger {
-    display: none;
-  }
-
   .list-right .episode-number {
     text-align: end;
   }
@@ -570,11 +529,9 @@ p a:hover {
   .list-left .episode-number {
     width: 1rem;
   }
-
 }
 
 @media only screen and (min-width: 952px) {
-
   .main-container {
     width: 952px;
     margin-right: auto;
@@ -596,6 +553,5 @@ p a:hover {
 
   .sq-text h3 {
     font-size: 1rem;
-  } 
-
+  }
 }
