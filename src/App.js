@@ -4,7 +4,7 @@ import List from "./pages/home/components/List/List";
 import season1 from "./services/season1.json";
 import season2 from "./services/season2.json";
 import season3 from "./services/season3.json";
-import Navbar from "./components/Navbar/NavBar";
+import Navbar from "./components/NavBar/NavBar";
 
 function App() {
   return (
