@@ -1,0 +1,91 @@
+.TopNav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black);
+  border-bottom: 1px solid var(--white);
+  width: 100%;
+  top: 0;
+}
+
+.Navigation {
+  display: flex;
+}
+
+.MobileNavigation {
+  display: flex;
+  align-items: center;
+}
+
+.Hamburger {
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 99;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.Hamburger:hover {
+  color: var(--pink);
+}
+
+.NavbarLinksContainer {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  position: absolute;
+  margin: 0;
+  padding: 5rem 3rem;
+  top: 0;
+  left: 5rem;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black);
+}
+
+.NavbarLinksContainer li {
+  padding: 0.8rem;
+}
+
+.MenuLink {
+  font-family: NeueMontreal, sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.3s;
+  transition-property: color;
+  padding: 0.6rem;
+}
+
+.MenuLink:hover {
+  color: var(--pink);
+}
+
+.Navigation {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .MobileNavigation {
+    display: none;
+  }
+
+  .Navigation {
+    display: flex;
+  }
+
+  .NavbarLinksContainer {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    left: 0;
+    padding: 0 2rem;
+  }
+
+  .NavbarLinksContainer li {
+    padding: 0;
+  }
+}
