@@ -1,16 +1,16 @@
-import classes from "../Navbar.module.css";
+import styles from "../Navbar.module.css";
 
 const NavLinks = () => {
   return (
-    <ul className={classes.NavbarLinksContainer}>
+    <ul className={styles.NavbarLinksContainer}>
       <li>
-        <a className={classes.MenuLink} href="/about">
+        <a className={styles.MenuLink} href="/about">
           about
         </a>
       </li>
       <li>
         <a
-          className={classes.MenuLink}
+          className={styles.MenuLink}
           href="https://soundcloud.com/pleasuregallery"
           target="_blank"
         >
@@ -19,7 +19,7 @@ const NavLinks = () => {
       </li>
       <li>
         <a
-          className={classes.MenuLink}
+          className={styles.MenuLink}
           href="https://www.instagram.com/pleasure__gallery/"
           target="_blank"
         >

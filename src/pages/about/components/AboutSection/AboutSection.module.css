@@ -1,0 +1,30 @@
+.AboutContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.AboutContainer h1 {
+  padding: 0;
+  margin: 1.2rem 0;
+}
+
+@media only screen and (min-width: 500px) {
+  .AboutContainer {
+    margin-top: 8rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .AboutContainer {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 952px) {
+  .AboutContainer {
+    width: 952px;
+  }
+}

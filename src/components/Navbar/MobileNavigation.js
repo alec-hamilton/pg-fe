@@ -1,5 +1,5 @@
 import NavLinks from "./NavLinks/NavLinks";
-import classes from "./Navbar.module.css";
+import styles from "./Navbar.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
@@ -9,7 +9,7 @@ const MobileNavigation = () => {
 
   const hamburgerIcon = (
     <GiHamburgerMenu
-      className={classes.Hamburger}
+      className={styles.Hamburger}
       size="2rem"
       color="#ffffff"
       onClick={() => setOpen(!open)}
@@ -18,14 +18,14 @@ const MobileNavigation = () => {
 
   const closedIcon = (
     <IoMdClose
-      className={classes.Hamburger}
+      className={styles.Hamburger}
       size="2rem"
       color="#ffffff"
       onClick={() => setOpen(!open)}
     />
   );
 
-  return <nav className={classes.MobileNavigation}>
+  return <nav className={styles.MobileNavigation}>
     {open ? closedIcon : hamburgerIcon}
     {open && <NavLinks />}</nav>;
 };

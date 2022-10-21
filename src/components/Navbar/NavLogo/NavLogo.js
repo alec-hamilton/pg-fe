@@ -1,16 +1,16 @@
-import classes from './NavLogo.module.css';
+import styles from './NavLogo.module.css';
 
 const NavLogo = () => {
   return (
     <a href="./">
-      <div className={classes.LogoContainer}>
+      <div className={styles.LogoContainer}>
         <img
-          className={classes.LogoImage}
+          className={styles.LogoImage}
           id="top"
           src="images/logo-94x94.png"
           alt="japanese wooden block lotus flower"
         />
-        <div className={classes.LogoText}>
+        <div className={styles.LogoText}>
           pleasure
           <br />
           gallery

@@ -1,19 +1,21 @@
+import styles from "./Season.module.css";
+
 const Season = ({ seasonData }) => {
   return (
     <div>
       <h1>season {seasonData.details.season}</h1>
-      <p className="artist-line">
+      <p className={styles.ArtistLine}>
         <a href={seasonData.details.site} target="_blank" rel="noreferrer">
           artwork by {seasonData.details.artist}
         </a>
       </p>
-      <div className="grid-container">
+      <div className={styles.GridContainer}>
         {seasonData.episodes.map((episode, index) => {
           return (
             <img
               src={`/images/${episode.img}`}
               alt=""
-              className={`e${episode.episode}`}
+              className={styles["e" + episode.episode]}
               key={index}
             />
           );
@@ -22,12 +24,12 @@ const Season = ({ seasonData }) => {
           return (
             <a
               href={episode.link}
-              className={`e${episode.episode}`}
+              className={styles["e" + episode.episode]}
               target="_blank"
               rel="noreferrer"
               key={index}
             >
-              <div className="sq-text">
+              <div className={styles.SQText}>
                 <h3>season {seasonData.details.season}</h3>
                 <h3>episode {episode.episode}</h3>
                 <h2>{episode.artist}</h2>
