@@ -1,8 +1,9 @@
 import styles from './NavLogo.module.css';
+import { Link } from 'react-router-dom';
 
 const NavLogo = () => {
   return (
-    <a href="./">
+    <Link to="/">
       <div className={styles.LogoContainer}>
         <img
           className={styles.LogoImage}
@@ -16,7 +17,7 @@ const NavLogo = () => {
           gallery
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

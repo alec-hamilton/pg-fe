@@ -2,7 +2,6 @@ import styles from "./AboutSection.module.css";
 
 const AboutSection = () => {
   return (
-    <section>
       <div className={styles.AboutContainer}>
         <h1>about</h1>
         <p>
@@ -17,11 +16,11 @@ const AboutSection = () => {
           in full.
         </p>
         <p>
-          For all enquiries please email
+          For all enquiries please email &nbsp;
           <a href="mailto:alec@pleasuregallery.net">alec@pleasuregallery.net</a>
         </p>
+        <hr />
       </div>
-    </section>
   );
 };
 

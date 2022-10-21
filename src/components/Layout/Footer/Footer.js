@@ -1,12 +1,15 @@
 import styles from "./Footer.module.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer>
       <div className={styles.FooterLogo}>
-        <a href="#">
-          <img src="images/pg-vector-white.svg" alt="" className={styles.LogoWhite} />
-        </a>
+        <img
+          src="images/pg-vector-white.svg"
+          alt=""
+          className={styles.LogoWhite}
+        />
       </div>
       <ul className={styles.FooterLinks}>
         <li>
@@ -25,7 +28,7 @@ const Footer = () => {
         </li>
       </ul>
       <p className={styles.FooterLine}>
-        <a href="https://github.com/alec-hamilton/pg-site">
+        <a href="https://github.com/alec-hamilton/pg-fe">
           site designed and built by alec hamilton
         </a>
       </p>

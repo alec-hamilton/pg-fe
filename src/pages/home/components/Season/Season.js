@@ -1,4 +1,5 @@
 import styles from "./Season.module.css";
+import { Link } from "react-router-dom";
 
 const Season = ({ seasonData }) => {
   return (
@@ -22,10 +23,10 @@ const Season = ({ seasonData }) => {
         })}
         {seasonData.episodes.map((episode, index) => {
           return (
-            <a
-              href={episode.link}
+            <Link
+              to={episode.link}
               className={styles["e" + episode.episode]}
-              target="_blank"
+              target={episode.link === "#" ? "_self" : episode.link}
               rel="noreferrer"
               key={index}
             >
@@ -34,7 +35,7 @@ const Season = ({ seasonData }) => {
                 <h3>episode {episode.episode}</h3>
                 <h2>{episode.artist}</h2>
               </div>
-            </a>
+            </Link>
           );
         })}
       </div>

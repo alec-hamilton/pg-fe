@@ -21,6 +21,12 @@
   right: 2rem;
   cursor: pointer;
   z-index: 99;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.Hamburger:hover {
+  color: var(--pink);
 }
 
 .NavbarLinksContainer {
