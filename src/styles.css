@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../public/fonts/NeueMontreal-Regular.otf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../public/fonts/NeueMontreal-Bold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("../public/fonts/NeueMontreal-Light.otf");
+  font-weight: 300;
+}
+
+:root {
+  --black: #282828;
+  --white: #f2f2f2;
+  --overlay: #00000080;
+  --pink: #ff8fa0;
+}
+
+:focus-visible {
+  outline: solid 2px var(--white);
+  border-radius: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  background-color: var(--black);
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border-top: 0 solid var(--white);
+  width: 100%;
+}
+
+h1 {
+  padding: 0;
+  margin: 1.2rem 0.4rem 0 0.4rem;
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
+}
+
+p {
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 500;
+}
+
+p a {
+  color: var(--white);
+  text-decoration: underline;
+  transition: 0.3s;
+  transition-property: color;
+}
+
+p a:hover {
+  color: var(--pink);
+}
+
+@media only screen and (min-width: 952px) {
+  .main-container {
+    width: 952px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

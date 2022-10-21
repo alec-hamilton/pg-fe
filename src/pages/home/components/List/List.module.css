@@ -1,0 +1,74 @@
+.ListLeft,
+.ListRight {
+  list-style: none;
+  padding-left: 0;
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 500;
+  margin: 0;
+}
+
+.ListContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.EpisodeNumber{
+  width: 2rem;
+  text-align: end;
+}
+
+td {
+  padding: 0;
+}
+
+.EpisodeList {
+  font-family: NeueMontreal, sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: underline;
+  transition: 0.3s;
+  transition-property: color;
+  margin-left: 1rem;
+}
+
+.EpisodeList:hover {
+  color: var(--pink);
+}
+
+.VerticalLine {
+  border-left: 1px solid var(--white);
+  grid-column: 2 / span 1;
+  justify-self: center;
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+
+  .ListContainer {
+    grid-template-columns: 8fr 1fr 8fr;
+    padding: 1rem;
+  }
+
+  .ListLeft {
+    grid-column: 1 / 2;
+  }
+
+  .VerticalLine {
+    display: block;
+    grid-column: 2 / 3;
+  }
+
+  .ListRight {
+    grid-column: 3 / 4;
+  }
+
+  .ListRight .EpisodeNumber {
+    text-align: end;
+  }
+
+  .ListLeft .EpisodeNumber {
+    width: 1rem;
+  }
+}
