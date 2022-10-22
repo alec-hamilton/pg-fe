@@ -14,7 +14,7 @@
   padding: 1rem 1rem 1rem 0;
 }
 
-.EpisodeNumber{
+.EpisodeNumber {
   width: 2rem;
   text-align: end;
 }
@@ -45,7 +45,6 @@ td {
 }
 
 @media only screen and (min-width: 700px) {
-
   .ListContainer {
     grid-template-columns: 8fr 1fr 8fr;
     padding: 1rem;

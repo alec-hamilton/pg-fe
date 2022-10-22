@@ -1,11 +1,15 @@
 import styles from "../Navbar.module.css";
 import { Link } from "react-router-dom";
 
-const NavLinks = ({isMobile, closeMobileMenu}) => {
+const NavLinks = ({ isMobile, closeMobileMenu }) => {
   return (
     <ul className={styles.NavbarLinksContainer}>
       <li>
-        <Link className={styles.MenuLink} to="/about" onClick={() => isMobile && closeMobileMenu()}>
+        <Link
+          className={styles.MenuLink}
+          to="/about"
+          onClick={() => isMobile && closeMobileMenu()}
+        >
           about
         </Link>
       </li>
