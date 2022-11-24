@@ -2,16 +2,17 @@ import styles from "./Season.module.css";
 import { Link } from "react-router-dom";
 
 const Season = ({ seasonData }) => {
+  const { details: {season, site, artist}, episodes } = seasonData;
   return (
     <div>
-      <h1>season {seasonData.details.season}</h1>
+      <h1>season {season}</h1>
       <p className={styles.ArtistLine}>
-        <a href={seasonData.details.site} target="_blank" rel="noreferrer">
-          artwork by {seasonData.details.artist}
+        <a href={site} target="_blank" rel="noreferrer">
+          artwork by {artist}
         </a>
       </p>
       <div className={styles.GridContainer}>
-        {seasonData.episodes.map((episode, index) => {
+        {episodes.map((episode, index) => {
           return (
             <img
               src={`/images/${episode.img}`}
@@ -21,7 +22,7 @@ const Season = ({ seasonData }) => {
             />
           );
         })}
-        {seasonData.episodes.map((episode, index) => {
+        {episodes.map((episode, index) => {
           return (
             <Link
               to={episode.link}
@@ -31,7 +32,7 @@ const Season = ({ seasonData }) => {
               key={index}
             >
               <div className={styles.SQText}>
-                <h3>season {seasonData.details.season}</h3>
+                <h3>season {season}</h3>
                 <h3>episode {episode.episode}</h3>
                 <h2>{episode.artist}</h2>
               </div>

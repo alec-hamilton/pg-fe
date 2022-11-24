@@ -18,6 +18,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
           className={styles.MenuLink}
           href="https://soundcloud.com/pleasuregallery"
           target="_blank"
+          rel="noreferrer"
         >
           soundcloud
         </a>
@@ -27,6 +28,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
           className={styles.MenuLink}
           href="https://www.instagram.com/pleasure__gallery/"
           target="_blank"
+          rel="noreferrer"
         >
           instagram
         </a>
