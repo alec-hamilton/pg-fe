@@ -23,9 +23,7 @@ const List = ({ seasonData }) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {episode.artist === "?"
-                      ? ""
-                      : episode.artist}
+                    {episode.artist === "?" ? "" : episode.artist}
                   </a>
                 </td>
               </tr>
@@ -47,9 +45,7 @@ const List = ({ seasonData }) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {episode.artist === "?"
-                      ? ""
-                      : episode.artist}
+                    {episode.artist === "?" ? "" : episode.artist}
                   </a>
                 </td>
               </tr>

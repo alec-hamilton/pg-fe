@@ -1,6 +1,6 @@
 import NavLinks from "./NavLinks/NavLinks";
 import styles from "./Navbar.module.css";
-import { BiMenu, BiX} from "react-icons/bi";
+import { BiMenu, BiX } from "react-icons/bi";
 import { useState } from "react";
 
 const MobileNavigation = () => {

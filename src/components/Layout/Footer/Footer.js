@@ -1,5 +1,4 @@
 import styles from "./Footer.module.css";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,7 +12,7 @@ const Footer = () => {
       </div>
       <ul className={styles.FooterLinks}>
         <li>
-          <a href="https://soundcloud.com/pleasuregallery" target="_blank">
+          <a href="https://soundcloud.com/pleasuregallery" target="_blank" rel="noreferrer">
             soundcloud
           </a>
           &nbsp;/&nbsp;
@@ -22,6 +21,7 @@ const Footer = () => {
           <a
             href="https://www.instagram.com/pleasure__gallery/"
             target="_blank"
+            rel="noreferrer"
           >
             instagram
           </a>
