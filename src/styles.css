@@ -49,23 +49,12 @@ a {
   text-decoration: none;
 }
 
-hr {
-  border-top: 0 solid var(--white);
-  width: 100%;
-}
-
 h1 {
   padding: 0;
   margin: 1.2rem 0.4rem 0 0.4rem;
   font-family: NeueMontreal, sans-serif;
   color: var(--white);
   font-weight: 500;
-}
-
-.main-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem 1rem 1rem;
 }
 
 p {
@@ -85,10 +74,3 @@ p a:hover {
   color: var(--pink);
 }
 
-@media only screen and (min-width: 952px) {
-  .main-container {
-    width: 952px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}

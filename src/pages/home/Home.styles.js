@@ -6,10 +6,10 @@ export const SeasonContainer = styled.div`
   padding: 0 1rem 1rem 1rem;
 
   @media only screen and (min-width: 952px) {
-    .main-container {
-      width: 952px;
-      margin-right: auto;
-      margin-left: auto;
-    }
+    width: 952px;
+    margin-right: auto;
+    margin-left: auto;
   }
 `;
+
+
