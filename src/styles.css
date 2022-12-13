@@ -34,6 +34,10 @@
   box-sizing: border-box;
 }
 
+* {
+  font-family: NeueMontreal, sans-serif;
+}
+
 body {
   padding: 0;
   background-color: var(--black);
@@ -74,3 +78,65 @@ p a:hover {
   color: var(--pink);
 }
 
+.e1:hover div,
+.e2:hover div,
+.e3:hover div,
+.e4:hover div,
+.e5:hover div,
+.e6:hover div,
+.e7:hover div,
+.e8:hover div,
+.e9:hover div,
+.e10:hover div,
+.e11:hover div,
+.e12:hover div {
+  visibility: visible;
+}
+
+.e1 {
+  grid-area: 3 / 4;
+}
+
+.e2 {
+  grid-area: 3 / 3;
+}
+
+.e3 {
+  grid-area: 3 / 2;
+}
+
+.e4 {
+  grid-area: 3 / 1;
+}
+
+.e5 {
+  grid-area: 2 / 4;
+}
+
+.e6 {
+  grid-area: 2 / 3;
+}
+
+.e7 {
+  grid-area: 2 / 2;
+}
+
+.e8 {
+  grid-area: 2 / 1;
+}
+
+.e9 {
+  grid-area: 1 / 4;
+}
+
+.e10 {
+  grid-area: 1 / 3;
+}
+
+.e11 {
+  grid-area: 1 / 2;
+}
+
+.e12 {
+  grid-area: 1 / 1;
+}
