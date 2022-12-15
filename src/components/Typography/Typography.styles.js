@@ -38,3 +38,23 @@ export const HoverTextSeasonEpisode = styled.h4`
     font-size: 1rem;
   }
 `;
+
+export const ListEpisodeText = styled.p`
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: underline;
+  transition: 0.3s;
+  transition-property: color;
+  margin: 0 0 0 1rem;
+  display: inline;
+`;
+
+export const PageTitle = styled.h1`
+  padding: 0;
+  margin: 1.2rem 0;
+`;
+
+export const BodyText = styled.p`
+  color: var(--white);
+  font-weight: 500;
+`;
