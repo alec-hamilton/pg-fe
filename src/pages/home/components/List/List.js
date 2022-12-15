@@ -26,11 +26,11 @@ const List = ({ seasonData }) => {
               <tr key={index}>
                 <ListEpisodeNumber>e{episode}</ListEpisodeNumber>
                 <ListTableData>
-                  <ExternalLink href={link}>
-                    <ListEpisodeText>
+                  <ListEpisodeText>
+                    <ExternalLink href={link}>
                       {artist === "?" ? "" : artist}
-                    </ListEpisodeText>
-                  </ExternalLink>
+                    </ExternalLink>
+                  </ListEpisodeText>
                 </ListTableData>
               </tr>
             );
@@ -45,11 +45,11 @@ const List = ({ seasonData }) => {
               <tr key={index}>
                 <ListEpisodeNumber>e{episode}</ListEpisodeNumber>
                 <ListTableData>
-                  <ExternalLink href={link}>
-                    <ListEpisodeText>
+                <ListEpisodeText>
+                    <ExternalLink href={link}>
                       {artist === "?" ? "" : artist}
-                    </ListEpisodeText>
-                  </ExternalLink>
+                    </ExternalLink>
+                  </ListEpisodeText>
                 </ListTableData>
               </tr>
             );

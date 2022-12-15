@@ -24,8 +24,14 @@ export const EpisodeTextBox = styled.div`
   @media only screen and (min-width: 700px) {
     padding: 0 1.5rem;
   }
-  
+
   @media only screen and (min-width: 952px) {
     padding: 0 1.875rem;
   }
+`;
+
+export const EpisodeTextBoxAnchor = styled.a.attrs((props) => ({
+  rel: "noreferrer",
+}))`
+  text-decoration: none;
 `;

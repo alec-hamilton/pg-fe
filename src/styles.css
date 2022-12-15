@@ -49,24 +49,7 @@ img {
   height: auto;
 }
 
-a {
-  text-decoration: none;
-}
-
-h1 {
-  padding: 0;
-  margin: 1.2rem 0.4rem 0 0.4rem;
-  font-family: NeueMontreal, sans-serif;
-  color: var(--white);
-  font-weight: 500;
-}
-
-p {
-  font-family: NeueMontreal, sans-serif;
-  color: var(--white);
-  font-weight: 500;
-}
-
+/* Hover styles */
 p a {
   color: var(--white);
   text-decoration: underline;
@@ -78,6 +61,7 @@ p a:hover {
   color: var(--pink);
 }
 
+/* Season grid setup */
 .e1:hover div,
 .e2:hover div,
 .e3:hover div,

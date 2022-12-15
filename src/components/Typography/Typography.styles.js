@@ -52,6 +52,8 @@ export const ListEpisodeText = styled.p`
 export const PageTitle = styled.h1`
   padding: 0;
   margin: 1.2rem 0;
+  color: var(--white);
+  font-weight: 500;
 `;
 
 export const BodyText = styled.p`

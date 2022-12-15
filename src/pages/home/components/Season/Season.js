@@ -4,7 +4,11 @@ import {
   HoverTextSeasonEpisode,
   SeasonTitle,
 } from "../../../../components/Typography/Typography.styles";
-import { EpisodeTextBox, GridContainer } from "./Season.styles";
+import {
+  EpisodeTextBox,
+  EpisodeTextBoxAnchor,
+  GridContainer,
+} from "./Season.styles";
 import { ExternalLink } from "../../../../components/Links/Links.styles";
 
 const Season = ({ seasonData }) => {
@@ -16,9 +20,9 @@ const Season = ({ seasonData }) => {
   return (
     <>
       <SeasonTitle>season {season}</SeasonTitle>
-      <ExternalLink href={site}>
-        <ArtistLine>artwork by {artist}</ArtistLine>
-      </ExternalLink>
+      <ArtistLine>
+        <ExternalLink href={site}>artwork by {artist}</ExternalLink>
+      </ArtistLine>
       <GridContainer>
         {episodes.map(({ episode, img }) => {
           return (
@@ -32,19 +36,20 @@ const Season = ({ seasonData }) => {
         })}
         {episodes.map(({ episode, link, artist }) => {
           return (
-            <a
+            <EpisodeTextBoxAnchor
               href={link}
               className={"e" + episode}
               target={link === "#" ? "_self" : link}
-              rel="noreferrer"
               key={episode}
             >
               <EpisodeTextBox>
                 <HoverTextSeasonEpisode>season {season}</HoverTextSeasonEpisode>
-                <HoverTextSeasonEpisode>episode {episode}</HoverTextSeasonEpisode>
+                <HoverTextSeasonEpisode>
+                  episode {episode}
+                </HoverTextSeasonEpisode>
                 <HoverTextArtist>{artist}</HoverTextArtist>
               </EpisodeTextBox>
-            </a>
+            </EpisodeTextBoxAnchor>
           );
         })}
       </GridContainer>

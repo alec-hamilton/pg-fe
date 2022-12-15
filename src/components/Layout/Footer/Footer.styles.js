@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ExternalLink } from "../../Links/Links.styles";
 
 export const FooterLogoContainer = styled.div`
   display: flex;
@@ -22,6 +23,15 @@ export const FooterLinks = styled.ul`
 
 export const FooterLinksItem = styled.li`
   padding: 0 0.25rem;
+  ${ExternalLink} {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+    transition-property: color;
+    &:hover {
+      color: var(--pink);
+    }
+  }
 `;
 
 export const FooterLine = styled.p`
