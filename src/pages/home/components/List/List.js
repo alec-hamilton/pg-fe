@@ -1,4 +1,13 @@
-import styles from "./List.module.css";
+import { VerticalLine } from "../../../../components/Dividers/Dividers.styles";
+import { ExternalLink } from "../../../../components/Links/Links.styles";
+import { ListEpisodeText } from "../../../../components/Typography/Typography.styles";
+import {
+  ListContainer,
+  ListEpisodeNumber,
+  ListLeft,
+  ListRight,
+  ListTableData,
+} from "./List.styles";
 
 const List = ({ seasonData }) => {
   const firstHalfEpisodes = seasonData.episodes.filter(
@@ -9,51 +18,45 @@ const List = ({ seasonData }) => {
   );
 
   return (
-    <div className={styles.ListContainer}>
-      <table className={styles.ListLeft}>
+    <ListContainer>
+      <ListLeft>
         <tbody>
-          {firstHalfEpisodes.map((episode, index) => {
+          {firstHalfEpisodes.map(({ episode, link, artist }, index) => {
             return (
               <tr key={index}>
-                <td className={styles.EpisodeNumber}>e{episode.episode}</td>
-                <td>
-                  <a
-                    href={episode.link}
-                    className={styles.EpisodeList}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {episode.artist === "?" ? "" : episode.artist}
-                  </a>
-                </td>
+                <ListEpisodeNumber>e{episode}</ListEpisodeNumber>
+                <ListTableData>
+                  <ListEpisodeText>
+                    <ExternalLink href={link}>
+                      {artist === "?" ? "" : artist}
+                    </ExternalLink>
+                  </ListEpisodeText>
+                </ListTableData>
               </tr>
             );
           })}
         </tbody>
-      </table>
-      <div className={styles.VerticalLine}></div>
-      <table className={styles.ListRight}>
+      </ListLeft>
+      <VerticalLine />
+      <ListRight>
         <tbody>
-          {secondHalfEpisodes.map((episode, index) => {
+          {secondHalfEpisodes.map(({ episode, link, artist }, index) => {
             return (
               <tr key={index}>
-                <td className={styles.EpisodeNumber}>e{episode.episode}</td>
-                <td>
-                  <a
-                    href={episode.link}
-                    className={styles.EpisodeList}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {episode.artist === "?" ? "" : episode.artist}
-                  </a>
-                </td>
+                <ListEpisodeNumber>e{episode}</ListEpisodeNumber>
+                <ListTableData>
+                <ListEpisodeText>
+                    <ExternalLink href={link}>
+                      {artist === "?" ? "" : artist}
+                    </ExternalLink>
+                  </ListEpisodeText>
+                </ListTableData>
               </tr>
             );
           })}
         </tbody>
-      </table>
-    </div>
+      </ListRight>
+    </ListContainer>
   );
 };
 

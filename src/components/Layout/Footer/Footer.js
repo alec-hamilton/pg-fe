@@ -1,37 +1,39 @@
+import { ExternalLink } from "../../Links/Links.styles";
 import styles from "./Footer.module.css";
+import {
+  FooterLine,
+  FooterLinks,
+  FooterLinksItem,
+  FooterLogo,
+  FooterLogoContainer,
+} from "./Footer.styles";
 
 const Footer = () => {
+  const footerLinksContent = [
+    <ExternalLink href="https://soundcloud.com/pleasuregallery">
+      soundcloud
+    </ExternalLink>,
+    "/",
+    <ExternalLink href="https://www.instagram.com/pleasure__gallery/">
+      instagram
+    </ExternalLink>,
+  ];
+
   return (
     <footer>
-      <div className={styles.FooterLogo}>
-        <img
-          src="images/pg-vector-white.svg"
-          alt=""
-          className={styles.LogoWhite}
-        />
-      </div>
-      <ul className={styles.FooterLinks}>
-        <li>
-          <a href="https://soundcloud.com/pleasuregallery" target="_blank" rel="noreferrer">
-            soundcloud
-          </a>
-          &nbsp;/&nbsp;
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/pleasure__gallery/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            instagram
-          </a>
-        </li>
-      </ul>
-      <p className={styles.FooterLine}>
-        <a href="https://github.com/alec-hamilton/pg-fe">
+      <FooterLogoContainer>
+        <FooterLogo src="images/pg-vector-white.svg" alt="" />
+      </FooterLogoContainer>
+      <FooterLinks>
+        {footerLinksContent.map((content, index) => {
+          return <FooterLinksItem key={index}>{content}</FooterLinksItem>;
+        })}
+      </FooterLinks>
+      <FooterLine className={styles.FooterLine}>
+        <ExternalLink href="https://github.com/alec-hamilton/pg-fe">
           site designed and built by alec hamilton
-        </a>
-      </p>
+        </ExternalLink>
+      </FooterLine>
     </footer>
   );
 };
