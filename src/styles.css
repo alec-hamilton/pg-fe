@@ -34,10 +34,6 @@
   box-sizing: border-box;
 }
 
-* {
-  font-family: NeueMontreal, sans-serif;
-}
-
 body {
   padding: 0;
   background-color: var(--black);
@@ -47,6 +43,12 @@ body {
 img {
   width: 100%;
   height: auto;
+}
+
+/* Global font defaults */
+h1, h2, h3, h4, h5, p, td {
+  color: var(--white);
+  font-family: NeueMontreal, sans-serif;
 }
 
 /* Hover styles */
