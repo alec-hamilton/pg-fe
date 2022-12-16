@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const NavLinksContainer = styled.ul`
+export const NavLinksContainer = styled(motion.ul)`
   display: flex;
   list-style: none;
   flex-direction: column;
