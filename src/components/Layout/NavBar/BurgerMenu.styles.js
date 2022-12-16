@@ -18,7 +18,7 @@ export const Hamburger = styled(BiMenu).attrs((props) => ({
 export const Close = styled(BiX).attrs((props) => ({
   size: "2rem",
 }))`
-  position: absolute;
+  position: fixed;
   right: 2rem;
   cursor: pointer;
   z-index: 99;

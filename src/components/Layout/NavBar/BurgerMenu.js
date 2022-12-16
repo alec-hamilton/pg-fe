@@ -14,7 +14,7 @@ const BurgerMenu = () => {
   return (
     <BurgerMenuContainer>
       {open ? closedIcon : hamburgerIcon}
-      {open && <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} />}
+      {open && <NavLinks closeMobileMenu={closeMobileMenu} />}
     </BurgerMenuContainer>
   );
 };

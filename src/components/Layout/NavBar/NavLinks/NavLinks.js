@@ -1,39 +1,32 @@
-import styles from "../Navbar.module.css";
-import { Link } from "react-router-dom";
+import { MenuLinkText, NavLinksContainer } from "./NavLinks.styles";
+import { ExternalLink, InternalLink } from "../../../Links/Links.styles";
 
-const NavLinks = ({ isMobile, closeMobileMenu }) => {
+const NavLinks = ({ closeMobileMenu }) => {
+  const menuLinksContent = [
+    <InternalLink to="/" onClick={() => closeMobileMenu()}>
+      home
+    </InternalLink>,
+    <InternalLink to="/about" onClick={() => closeMobileMenu()}>
+      about
+    </InternalLink>,
+    <ExternalLink href="https://soundcloud.com/pleasuregallery">
+      soundcloud
+    </ExternalLink>,
+    <ExternalLink href="https://www.instagram.com/pleasure__gallery/">
+      instagram
+    </ExternalLink>,
+  ];
+
   return (
-    <ul className={styles.NavbarLinksContainer}>
-      <li>
-        <Link
-          className={styles.MenuLink}
-          to="/about"
-          onClick={() => isMobile && closeMobileMenu()}
-        >
-          about
-        </Link>
-      </li>
-      <li>
-        <a
-          className={styles.MenuLink}
-          href="https://soundcloud.com/pleasuregallery"
-          target="_blank"
-          rel="noreferrer"
-        >
-          soundcloud
-        </a>
-      </li>
-      <li>
-        <a
-          className={styles.MenuLink}
-          href="https://www.instagram.com/pleasure__gallery/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          instagram
-        </a>
-      </li>
-    </ul>
+    <NavLinksContainer>
+      {menuLinksContent.map((content, index) => {
+        return (
+          <li key={index}>
+            <MenuLinkText>{content}</MenuLinkText>
+          </li>
+        );
+      })}
+    </NavLinksContainer>
   );
 };
 
