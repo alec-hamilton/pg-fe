@@ -1,23 +1,21 @@
-import styles from './NavLogo.module.css';
-import { Link } from 'react-router-dom';
+import { InternalLink } from '../../../Links/Links.styles';
+import { LogoContainer, LogoImage, LogoText } from './NavLogo.styles';
 
 const NavLogo = () => {
   return (
-    <Link to="/">
-      <div className={styles.LogoContainer}>
-        <img
-          className={styles.LogoImage}
-          id="top"
+    <InternalLink to="/">
+      <LogoContainer>
+        <LogoImage
           src="images/logo-94x94.png"
           alt="japanese wooden block lotus flower"
         />
-        <div className={styles.LogoText}>
+        <LogoText>
           pleasure
           <br />
           gallery
-        </div>
-      </div>
-    </Link>
+        </LogoText>
+      </LogoContainer>
+    </InternalLink>
   );
 };
 
