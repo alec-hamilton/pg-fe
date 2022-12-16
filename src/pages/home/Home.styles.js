@@ -5,10 +5,9 @@ export const SeasonContainer = styled.div`
   flex-direction: column;
   padding: 0 1rem 1rem 1rem;
 
-  @media only screen and (min-width: 952px) {
+  @media only screen and (min-width: 970px) {
     width: 952px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
   }
 `;
 

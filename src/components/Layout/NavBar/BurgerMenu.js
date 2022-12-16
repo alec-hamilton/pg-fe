@@ -1,21 +1,30 @@
-import { useCycle } from "framer-motion";
+import { useState } from "react";
 import { BurgerMenuContainer, Close, Hamburger } from "./BurgerMenu.styles";
 import NavLinks from "./NavLinks/NavLinks";
 
 const BurgerMenu = () => {
-  const [open, cycleOpen] = useCycle(false, true);
-  const hamburgerIcon = <Hamburger onClick={cycleOpen} />;
+  const [open, setOpen] = useState(false);
 
-  const closedIcon = <Close onClick={cycleOpen} />;
+  const hamburgerIcon = (
+    <Hamburger
+      onClick={() => {
+        setOpen(!open);
+      }}
+    />
+  );
 
-  const closeMobileMenu = () => {
-    cycleOpen();
-  };
+  const closedIcon = (
+    <Close
+      onClick={() => {
+        setOpen(!open);
+      }}
+    />
+  );
 
   return (
     <BurgerMenuContainer>
       {open ? closedIcon : hamburgerIcon}
-      <NavLinks open={open} closeMobileMenu={closeMobileMenu} />
+      <NavLinks open={open} setOpen={setOpen} />
     </BurgerMenuContainer>
   );
 };
