@@ -5,16 +5,26 @@ import NavLinks from "./NavLinks/NavLinks";
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
 
-  const hamburgerIcon = <Hamburger onClick={() => setOpen(!open)} />;
+  const hamburgerIcon = (
+    <Hamburger
+      onClick={() => {
+        setOpen(!open);
+      }}
+    />
+  );
 
-  const closedIcon = <Close onClick={() => setOpen(!open)} />;
-
-  const closeMobileMenu = () => setOpen(false);
+  const closedIcon = (
+    <Close
+      onClick={() => {
+        setOpen(!open);
+      }}
+    />
+  );
 
   return (
     <BurgerMenuContainer>
       {open ? closedIcon : hamburgerIcon}
-      {open && <NavLinks closeMobileMenu={closeMobileMenu} />}
+      <NavLinks open={open} setOpen={setOpen} />
     </BurgerMenuContainer>
   );
 };

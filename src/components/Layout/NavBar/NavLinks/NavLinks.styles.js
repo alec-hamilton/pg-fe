@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const NavLinksContainer = styled.ul`
+export const NavLinksContainer = styled(motion.ul)`
   display: flex;
   list-style: none;
   flex-direction: column;
@@ -18,7 +19,7 @@ export const NavLinksContainer = styled.ul`
     border-left: 1px solid var(--white);
   }
 
-  @media only screen and (min-width: 952px) {
+  @media only screen and (min-width: 1150px) {
     left: calc(((100% - 920px)/2) + 690px);
   }
 
